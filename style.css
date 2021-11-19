@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #4d4f62;
+    background-color: hsl(0, 0%, 98%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile design starts */ 
+main {
+    padding: 4rem 2.5rem;
+}
+
+ /* Header style starts */
+
+.header-subtitle, 
+.header-title {
+    font-size: 1.6rem;
+}
+
+.header-subtitle {
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.header-title {
+    font-weight: 600;
+}
+
+.header-body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 60%;
+    margin: 0 auto;
+    color: hsl(229, 6%, 66%);
+}
+
+.card-header {
+    text-align: center;
+}
+
+.header-subtitle {
+    margin-bottom: 0;
+}
+
+.header-title {
+    margin-top: 0;
+}
+
+/* Header style ends */
+
+/* Grid card style starts */
+
+.grid-container {
+    margin: 0 auto;
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: center;
+    padding: 5rem 2.5rem 0;
+}
+
+.card {
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 10px 0 rgba(	84, 158, 242, .1), 0 20px 20px 0 rgba(	84, 158, 242, .1);
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-icon {
+    align-self: flex-end;
+}
+.card-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card-body {
+    margin-bottom: 2.5rem;
+    font-size: .9rem;
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+}
+
+.card-supervisor {
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.card-team {
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.card-karma {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.card-cal {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+/* Grid container style ends */
+
+/* Mobile Design Ends */
+
+/* Media query Desktop design 1024px starts */
+@media (min-width: 1024px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 280px);
+        gap: 3rem;
+    }
+
+    .card {
+        width: 360px;
+    }
+
+    .header-subtitle, 
+    .header-title {
+    font-size: 2.4rem;
+    }
+
+    .header-body {
+        font-size: 1.2rem;
+    }
+    
+    .card-body {
+        font-size: 1rem;
+    }
+
+    .card-supervisor, .card-karma {
+        grid-column: 1 / 2;
+        justify-self: center;
+        align-self: center;
+    } 
+
+    .card-team, .card-cal{
+        grid-column: 2 / 3;
+        justify-self: center;
+        align-self: center;
+    }  
+}
+
+/* Media query Desktop design 1440px starts */ 
+
+@media (min-width: 1440px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: repeat(3, 1fr);
+        gap: 3rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top:4rem;
+    }
+
+    .card {
+        width: 360px;
+    }
+
+    .card-supervisor{
+      
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .card-team {
+        grid-area: 1 / 2 / 2 / 3;
+   
+    }
+
+    .card-karma {
+        grid-area: 2 / 2 / 4 / 3;
+       
+    }
+
+    .card-cal {
+        grid-area: 1 / 3 / 3 / 4;
+    }
+}
